@@ -101,3 +101,27 @@
             color: var(--primary-color);
             width: 16px;
         }
+@media (max-width: 768px) {
+
+    .calendar-section {
+        padding: 1rem;
+    }
+
+    .calendar {
+        padding: 1rem;
+    }
+
+    .calendar-grid {
+        gap: 2px;
+    }
+
+    .calendar-date {
+        padding: 0.5rem 0;
+        font-size: 0.85rem;
+    }
+
+    .calendar-day {
+        font-size: 0.75rem;
+        padding: 0.25rem;
+    }
+}
