@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Paraíso Conectado</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Paraíso Conectado</h1>
+                    <p>Municipalidad de Paraíso</p>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="comercios.html"><i class="fas fa-store"></i> Comercios</a></li>
+                    <li><a href="turismo.html"><i class="fas fa-map-marked-alt"></i> Turismo</a></li>
+                    <li><a href="eventos.html" class="active"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header de página -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Eventos en Paraíso</h1>
+            <p>Conoce y participa en los eventos culturales, deportivos, educativos y comunitarios que se realizan en nuestro cantón.</p>
+        </div>
+    </section>
+
+    <!-- Filtros de eventos -->
+    <section class="filters">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="eventFilter" class="filter-label">Filtrar por categoría:</label>
+                    <select id="eventFilter" class="filter-select">
+                        <option value="all">Todos los eventos</option>
+                        <option value="feria">Feria</option>
+                        <option value="festival">Festival</option>
+                        <option value="cultura">Cultura</option>
+                        <option value="naturaleza">Naturaleza</option>
+                        <option value="gastronomía">Gastronomía</option>
+                        <option value="música">Música</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendario de eventos -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Próximos Eventos</h2>
+                <p>Participa en las actividades que enriquecen la vida comunitaria de Paraíso</p>
+            </div>
+            
+            <div class="cards-container" id="eventsContainer">
+                <!-- Las tarjetas se cargarán dinámicamente con JavaScript -->
+            </div>
+            
+            <!-- Calendario mensual visual -->
+            <div class="calendar-section">
+                <h3>Calendario de Actividades</h3>
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <button class="calendar-nav"><i class="fas fa-chevron-left"></i></button>
+                        <h4>Noviembre 2023</h4>
+                        <button class="calendar-nav"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="calendar-day">Lun</div>
+                        <div class="calendar-day">Mar</div>
+                        <div class="calendar-day">Mié</div>
+                        <div class="calendar-day">Jue</div>
+                        <div class="calendar-day">Vie</div>
+                        <div class="calendar-day">Sáb</div>
+                        <div class="calendar-day">Dom</div>
+                        
+                        <!-- Días del mes -->
+                        <div class="calendar-date"></div>
+                        <div class="calendar-date"></div>
+                        <div class="calendar-date">1</div>
+                        <div class="calendar-date">2</div>
+                        <div class="calendar-date">3</div>
+                        <div class="calendar-date">4</div>
+                        <div class="calendar-date">5</div>
+                        <div class="calendar-date">6</div>
+                        <div class="calendar-date">7</div>
+                        <div class="calendar-date">8</div>
+                        <div class="calendar-date">9</div>
+                        <div class="calendar-date">10</div>
+                        <div class="calendar-date">11</div>
+                        <div class="calendar-date">12</div>
+                        <div class="calendar-date">13</div>
+                        <div class="calendar-date">14</div>
+                        <div class="calendar-date event-day">15<span class="event-indicator" title="Feria del Agricultor"></span></div>
+                        <div class="calendar-date">16</div>
+                        <div class="calendar-date">17</div>
+                        <div class="calendar-date event-day">18<span class="event-indicator" title="Taller de Cocina Tradicional"></span></div>
+                        <div class="calendar-date">19</div>
+                        <div class="calendar-date event-day">20<span class="event-indicator" title="Exposición de Arte Local"></span></div>
+                        <div class="calendar-date">21</div>
+                        <div class="calendar-date">22</div>
+                        <div class="calendar-date">23</div>
+                        <div class="calendar-date">24</div>
+                        <div class="calendar-date event-day">25<span class="event-indicator" title="Caminata Ecológica"></span></div>
+                        <div class="calendar-date">26</div>
+                        <div class="calendar-date">27</div>
+                        <div class="calendar-date">28</div>
+                        <div class="calendar-date">29</div>
+                        <div class="calendar-date">30</div>
+                        <div class="calendar-date event-day">1<span class="event-indicator" title="Festival de la Luz"></span></div>
+                        <div class="calendar-date">2</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-footer">
+                <p>¿Quieres que tu evento aparezca en nuestro calendario?</p>
+                <a href="contacto.html" class="btn btn-outline">
+                    Envíanos la información <i class="fas fa-paper-plane"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información sobre eventos municipales -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-content">
+                <div class="info-text">
+                    <h2>Eventos Municipales</h2>
+                    <p>La Municipalidad de Paraíso organiza y apoya eventos que fomentan la participación ciudadana, el desarrollo cultural y el fortalecimiento de la comunidad.</p>
+                    <ul class="info-list">
+                        <li><i class="fas fa-check-circle"></i> <strong>Eventos Culturales:</strong> Música, teatro, danza y exposiciones de arte</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Eventos Deportivos:</strong> Torneos, maratones y actividades recreativas</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Eventos Educativos:</strong> Talleres, charlas y capacitaciones</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Eventos Comunitarios:</strong> Ferias, festivales y celebraciones tradicionales</li>
+                    </ul>
+                </div>
+                <div class="info-image">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Festival de la Luz en Paraíso">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3>Paraíso Conectado</h3>
+                            <p>Municipalidad de Paraíso</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Plataforma oficial impulsada por la Municipalidad de Paraíso para apoyar el comercio local y promover el turismo en el cantón.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Enlaces Rápidos</h4>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="comercios.html">Comercios Locales</a></li>
+                            <li><a href="turismo.html">Turismo</a></li>
+                            <li><a href="eventos.html">Eventos</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Enlaces Institucionales</h4>
+                        <ul>
+                            <li><a href="#">Portal Municipal</a></li>
+                            <li><a href="#">Transparencia</a></li>
+                            <li><a href="#">Noticias</a></li>
+                            <li><a href="#">Trámites en Línea</a></li>
+                            <li><a href="#">Prensa Municipal</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Contacto Municipal</h4>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-phone"></i> Tel: 2543-0000</li>
+                            <li><i class="fas fa-envelope"></i> info@paraisomun.go.cr</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Paraíso, Cartago, Costa Rica</li>
+                            <li><i class="fas fa-clock"></i> Horario: L-V 8am-4pm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Municipalidad de Paraíso. Todos los derechos reservados.</p>
+                <p>Plataforma desarrollada para fortalecer la economía local y promover el turismo sostenible.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <style>
+        /* Estilos específicos para la página de eventos */
+        .calendar-section {
+            margin-top: 4rem;
+            padding: 2rem;
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius);
+        }
+        
+        .calendar-section h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .calendar {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .calendar-header h4 {
+            margin: 0;
+            color: var(--primary-color);
+        }
+        
+        .calendar-nav {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+        }
+        
+        .calendar-day {
+            text-align: center;
+            font-weight: 600;
+            color: var(--primary-color);
+            padding: 0.5rem;
+        }
+        
+        .calendar-date {
+            text-align: center;
+            padding: 0.75rem;
+            border-radius: 4px;
+            position: relative;
+        }
+        
+        .calendar-date:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .calendar-date.event-day {
+            background-color: rgba(46, 125, 50, 0.1);
+            font-weight: 500;
+        }
+        
+        .event-indicator {
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+        }
+        
+        .event-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .event-detail {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray-color);
+            font-size: 0.875rem;
+        }
+        
+        .event-detail i {
+            color: var(--primary-color);
+            width: 16px;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comercios Locales - Paraíso Conectado</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Paraíso Conectado</h1>
+                    <p>Municipalidad de Paraíso</p>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="comercios.html" class="active"><i class="fas fa-store"></i> Comercios</a></li>
+                    <li><a href="turismo.html"><i class="fas fa-map-marked-alt"></i> Turismo</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header de página -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Comercios Locales de Paraíso</h1>
+            <p>Descubre y apoya a los emprendedores y negocios de nuestro cantón. Encuentra productos y servicios de calidad cerca de ti.</p>
+        </div>
+    </section>
+
+    <!-- Filtros y búsqueda -->
+    <section class="filters">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="categoryFilter" class="filter-label">Filtrar por categoría:</label>
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="all">Todas las categorías</option>
+                        <option value="restaurante">Restaurante</option>
+                        <option value="cafetería">Cafetería</option>
+                        <option value="artesanías">Artesanías</option>
+                        <option value="supermercado">Supermercado</option>
+                        <option value="farmacia">Farmacia</option>
+                        <option value="papelería">Papelería</option>
+                        <option value="carnicería">Carnicería</option>
+                        <option value="panadería">Panadería</option>
+                    </select>
+                </div>
+                
+                <div class="search-box">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Buscar comercio por nombre, categoría o descripción...">
+                    <button id="searchButton" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Listado de comercios -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="cards-container" id="businessesContainer">
+                <!-- Las tarjetas se cargarán dinámicamente con JavaScript -->
+            </div>
+            
+            <div class="section-footer">
+                <p>¿Eres un comercio local y quieres aparecer en nuestra plataforma?</p>
+                <a href="#" class="btn btn-outline">
+                    Contáctanos <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3>Paraíso Conectado</h3>
+                            <p>Municipalidad de Paraíso</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Plataforma oficial impulsada por la Municipalidad de Paraíso para apoyar el comercio local y promover el turismo en el cantón.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Enlaces Rápidos</h4>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="comercios.html">Comercios Locales</a></li>
+                            <li><a href="turismo.html">Turismo</a></li>
+                            <li><a href="#">Eventos</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Enlaces Institucionales</h4>
+                        <ul>
+                            <li><a href="#">Portal Municipal</a></li>
+                            <li><a href="#">Transparencia</a></li>
+                            <li><a href="#">Noticias</a></li>
+                            <li><a href="#">Trámites en Línea</a></li>
+                            <li><a href="#">Prensa Municipal</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Contacto Municipal</h4>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-phone"></i> Tel: 2543-0000</li>
+                            <li><i class="fas fa-envelope"></i> info@paraisomun.go.cr</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Paraíso, Cartago, Costa Rica</li>
+                            <li><i class="fas fa-clock"></i> Horario: L-V 8am-4pm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Municipalidad de Paraíso. Todos los derechos reservados.</p>
+                <p>Plataforma desarrollada para fortalecer la economía local y promover el turismo sostenible.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

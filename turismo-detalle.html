@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Lugar Turístico - Paraíso Conectado</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Paraíso Conectado</h1>
+                    <p>Municipalidad de Paraíso</p>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="comercios.html"><i class="fas fa-store"></i> Comercios</a></li>
+                    <li><a href="turismo.html"><i class="fas fa-map-marked-alt"></i> Turismo</a></li>
+                    <li><a href="eventos.html"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Detalle del Lugar Turístico -->
+    <section class="tourism-detail">
+        <div class="container">
+            <div class="place-detail">
+                <!-- Encabezado del lugar -->
+                <div class="place-header">
+                    <div class="place-image-main">
+                        <img id="placeImage" src="" alt="">
+                    </div>
+                    <div class="place-info">
+                        <h1 id="placeName" class="place-title"></h1>
+                        <span id="placeCategory" class="place-category"></span>
+                        <p id="placeDescription" class="place-description"></p>
+                        
+                        <div class="place-details-grid">
+                            <div class="place-detail-item">
+                                <h4><i class="fas fa-map-marker-alt"></i> Ubicación</h4>
+                                <p id="placeLocation"></p>
+                            </div>
+                            <div class="place-detail-item">
+                                <h4><i class="fas fa-clock"></i> Horario</h4>
+                                <p id="placeHours"></p>
+                            </div>
+                            <div class="place-detail-item">
+                                <h4><i class="fas fa-ticket-alt"></i> Precio</h4>
+                                <p id="placePrice"></p>
+                            </div>
+                            <div class="place-detail-item">
+                                <h4><i class="fas fa-star"></i> Recomendación</h4>
+                                <p>Ideal para familias y amantes de la naturaleza</p>
+                            </div>
+                        </div>
+                        
+                        <div class="place-actions">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-directions"></i> Cómo llegar
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fas fa-camera"></i> Galería de fotos
+                            </a>
+                            <a href="turismo.html" class="btn btn-outline">
+                                <i class="fas fa-arrow-left"></i> Volver a Turismo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Características del lugar -->
+                <div class="place-features" id="featuresContainer">
+                    <!-- Las características se cargarán dinámicamente con JavaScript -->
+                </div>
+                
+                <!-- Información adicional -->
+                <div class="additional-info">
+                    <div class="info-tabs">
+                        <div class="tab-buttons">
+                            <button class="tab-button active" data-tab="info">Información</button>
+                            <button class="tab-button" data-tab="activities">Actividades</button>
+                            <button class="tab-button" data-tab="tips">Consejos</button>
+                            <button class="tab-button" data-tab="nearby">Cerca de aquí</button>
+                        </div>
+                        
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="info">
+                                <h3>Información Detallada</h3>
+                                <p>El Jardín Botánico Lankester es uno de los atractivos turísticos más importantes de la región. Fundado en 1973 por el naturalista inglés Charles H. Lankester, el jardín fue donado a la Universidad de Costa Rica para su conservación y estudio.</p>
+                                <p>El jardín cuenta con una extensión de 10.7 hectáreas y alberga más de 3,000 especies de plantas, siendo las orquídeas su principal atractivo. Es un centro de investigación y conservación de la flora epífita de Costa Rica.</p>
+                                <ul>
+                                    <li>Área total: 10.7 hectáreas</li>
+                                    <li>Especies de orquídeas: más de 1,000</li>
+                                    <li>Especies de bromelias: más de 600</li>
+                                    <li>Especies de cactus: más de 500</li>
+                                    <li>Longitud de senderos: 1.5 km</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tab-pane" id="activities">
+                                <h3>Actividades Disponibles</h3>
+                                <div class="activities-grid">
+                                    <div class="activity">
+                                        <i class="fas fa-hiking"></i>
+                                        <h4>Caminatas Guiadas</h4>
+                                        <p>Recorridos educativos por los senderos del jardín con guías especializados.</p>
+                                    </div>
+                                    <div class="activity">
+                                        <i class="fas fa-camera"></i>
+                                        <h4>Fotografía</h4>
+                                        <p>Excelente oportunidad para fotografiar orquídeas y otras plantas exóticas.</p>
+                                    </div>
+                                    <div class="activity">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <h4>Talleres Educativos</h4>
+                                        <p>Talleres sobre cultivo de orquídeas y conservación de plantas epífitas.</p>
+                                    </div>
+                                    <div class="activity">
+                                        <i class="fas fa-binoculars"></i>
+                                        <h4>Observación de Aves</h4>
+                                        <p>Posibilidad de observar más de 50 especies de aves en su hábitat natural.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane" id="tips">
+                                <h3>Consejos para la Visita</h3>
+                                <div class="tips-list">
+                                    <div class="tip">
+                                        <i class="fas fa-umbrella"></i>
+                                        <div>
+                                            <h4>Prepara para el clima</h4>
+                                            <p>El clima en Paraíso puede cambiar rápidamente. Trae un impermeable o sombrilla.</p>
+                                        </div>
+                                    </div>
+                                    <div class="tip">
+                                        <i class="fas fa-shoe-prints"></i>
+                                        <div>
+                                            <h4>Calzado adecuado</h4>
+                                            <p>Usa zapatos cómodos para caminar, preferiblemente cerrados y con buena tracción.</p>
+                                        </div>
+                                    </div>
+                                    <div class="tip">
+                                        <i class="fas fa-bottle-water"></i>
+                                        <div>
+                                            <h4>Hidratación</h4>
+                                            <p>Trae suficiente agua para hidratarte durante el recorrido.</p>
+                                        </div>
+                                    </div>
+                                    <div class="tip">
+                                        <i class="fas fa-camera"></i>
+                                        <div>
+                                            <h4>Fotografía</h4>
+                                            <p>No uses flash en las fotografías de las orquídeas para no dañarlas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane" id="nearby">
+                                <h3>Lugares Cercanos</h3>
+                                <p>En los alrededores del Jardín Botánico Lankester puedes visitar:</p>
+                                <div class="nearby-places">
+                                    <div class="nearby-place">
+                                        <h4>Iglesia de Paraíso</h4>
+                                        <p>3 km • Templo histórico con arquitectura colonial</p>
+                                    </div>
+                                    <div class="nearby-place">
+                                        <h4>Restaurante La Casona</h4>
+                                        <p>2.5 km • Comida típica costarricense</p>
+                                    </div>
+                                    <div class="nearby-place">
+                                        <h4>Mirador Orosi</h4>
+                                        <p>8 km • Vista panorámica del valle de Orosi</p>
+                                    </div>
+                                    <div class="nearby-place">
+                                        <h4>Catarata Doña Ana</h4>
+                                        <p>12 km • Hermosa cascada de 30 metros</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Galería de imágenes -->
+                <div class="place-gallery">
+                    <h3>Galería del Lugar</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Jardín Botánico Lankester">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Orquídeas en el jardín">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://images.unsplash.com/photo-1463946377180-5187c5b0a90c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Senderos del jardín">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mariposario">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3>Paraíso Conectado</h3>
+                            <p>Municipalidad de Paraíso</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Plataforma oficial impulsada por la Municipalidad de Paraíso para apoyar el comercio local y promover el turismo en el cantón.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Enlaces Rápidos</h4>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="comercios.html">Comercios Locales</a></li>
+                            <li><a href="turismo.html">Turismo</a></li>
+                            <li><a href="eventos.html">Eventos</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Enlaces Institucionales</h4>
+                        <ul>
+                            <li><a href="#">Portal Municipal</a></li>
+                            <li><a href="#">Transparencia</a></li>
+                            <li><a href="#">Noticias</a></li>
+                            <li><a href="#">Trámites en Línea</a></li>
+                            <li><a href="#">Prensa Municipal</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Contacto Municipal</h4>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-phone"></i> Tel: 2543-0000</li>
+                            <li><i class="fas fa-envelope"></i> info@paraisomun.go.cr</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Paraíso, Cartago, Costa Rica</li>
+                            <li><i class="fas fa-clock"></i> Horario: L-V 8am-4pm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Municipalidad de Paraíso. Todos los derechos reservados.</p>
+                <p>Plataforma desarrollada para fortalecer la economía local y promover el turismo sostenible.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <style>
+        /* Estilos específicos para la página de detalle de turismo */
+        .tourism-detail {
+            padding: 3rem 0;
+        }
+        
+        .place-header {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        @media (min-width: 992px) {
+            .place-header {
+                flex-direction: row;
+            }
+        }
+        
+        .place-image-main {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .place-image-main img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .place-info {
+            flex: 1;
+        }
+        
+        .place-title {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .place-category {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+        
+        .place-description {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .place-details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .place-detail-item h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .place-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        /* Tabs */
+        .info-tabs {
+            margin: 3rem 0;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        
+        .tab-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .tab-button {
+            padding: 1rem 1.5rem;
+            background: none;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--gray-color);
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .tab-button:hover {
+            color: var(--primary-color);
+            background-color: rgba(30, 58, 95, 0.05);
+        }
+        
+        .tab-button.active {
+            color: var(--primary-color);
+        }
+        
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .tab-content {
+            padding: 2rem;
+        }
+        
+        .tab-pane {
+            display: none;
+        }
+        
+        .tab-pane.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .tab-pane h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .tab-pane ul {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .tab-pane li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Actividades */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .activity {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+        
+        .activity:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .activity i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .activity h4 {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Consejos */
+        .tips-list {
+            margin-top: 1.5rem;
+        }
+        
+        .tip {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+        
+        .tip i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-top: 0.25rem;
+        }
+        
+        .tip h4 {
+            margin-bottom: 0.25rem;
+        }
+        
+        /* Lugares cercanos */
+        .nearby-places {
+            margin-top: 1.5rem;
+        }
+        
+        .nearby-place {
+            padding: 1rem;
+            border-left: 3px solid var(--secondary-color);
+            margin-bottom: 1rem;
+            background-color: var(--light-gray);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .nearby-place h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+        
+        /* Galería */
+        .place-gallery {
+            margin-top: 3rem;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+    <script>
+        // Funcionalidad para tabs
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // Remover clase active de todos los botones y paneles
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+                    
+                    // Agregar clase active al botón clickeado y al panel correspondiente
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

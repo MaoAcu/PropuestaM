@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Paraíso Conectado</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Paraíso Conectado</h1>
+                    <p>Municipalidad de Paraíso</p>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="comercios.html"><i class="fas fa-store"></i> Comercios</a></li>
+                    <li><a href="turismo.html"><i class="fas fa-map-marked-alt"></i> Turismo</a></li>
+                    <li><a href="eventos.html"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+                    <li><a href="contacto.html" class="active"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header de página -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contacto Municipal</h1>
+            <p>Estamos aquí para atender tus consultas, sugerencias y solicitudes. Tu opinión es importante para nosotros.</p>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Información de Contacto</h2>
+                    <p>Puedes comunicarte con la Municipalidad de Paraíso a través de los siguientes medios:</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Dirección</h4>
+                                <p>Municipalidad de Paraíso<br>
+                                200 metros este del Parque Central<br>
+                                Paraíso, Cartago, Costa Rica</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Teléfonos</h4>
+                                <p>Central Telefónica: 2543-0000<br>
+                                Fax: 2543-0001<br>
+                                Emergencias: 911</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Correo Electrónico</h4>
+                                <p>Información General: info@paraisomun.go.cr<br>
+                                Comercios Locales: comercios@paraisomun.go.cr<br>
+                                Turismo: turismo@paraisomun.go.cr</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Horario de Atención</h4>
+                                <p>Lunes a Viernes: 8:00 am - 4:00 pm<br>
+                                Sábados: 8:00 am - 12:00 md<br>
+                                Cerrado: Domingos y feriados</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-media">
+                        <h3>Síguenos en Redes Sociales</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h2>Envíanos un Mensaje</h2>
+                    <p>Completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible.</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre completo *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Asunto *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="comercio">Información sobre comercios</option>
+                                <option value="turismo">Información turística</option>
+                                <option value="eventos">Información sobre eventos</option>
+                                <option value="sugerencia">Sugerencia o comentario</option>
+                                <option value="problema">Reportar un problema</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" required>
+                                <span>Acepto recibir información sobre actividades municipales</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Mapa de ubicación -->
+            <div class="map-section">
+                <h3>Ubicación de la Municipalidad</h3>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <div class="map-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>Municipalidad de Paraíso</h4>
+                            <p>200 metros este del Parque Central<br>
+                            Paraíso, Cartago, Costa Rica</p>
+                        </div>
+                        <div class="map-actions">
+                            <a href="https://maps.google.com/?q=Municipalidad+de+Paraíso,+Cartago,+Costa+Rica" target="_blank" class="btn btn-outline">
+                                <i class="fas fa-directions"></i> Ver en Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Preguntas frecuentes -->
+            <div class="faq-section">
+                <h3>Preguntas Frecuentes</h3>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            ¿Cómo puedo registrar mi negocio en la plataforma?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Para registrar tu negocio, debes acudir a la Oficina de Desarrollo Económico de la Municipalidad con los siguientes documentos: cédula jurídica o física, comprobante de domicilio, y permiso de funcionamiento. También puedes iniciar el proceso completando el formulario en la sección de "Comercios" y nuestro equipo se pondrá en contacto contigo.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            ¿La plataforma tiene algún costo para los comercios?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No, la plataforma "Paraíso Conectado" es un servicio gratuito proporcionado por la Municipalidad para apoyar a los comercios locales y promover el desarrollo económico del cantón.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            ¿Cómo puedo sugerir un lugar turístico para incluir en la plataforma?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Puedes enviar tu sugerencia a través del formulario de contacto seleccionando el asunto "Información turística". Incluye el nombre del lugar, ubicación y una breve descripción. Nuestro equipo evaluará la sugerencia y se pondrá en contacto contigo si se requiere más información.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            ¿La Municipalidad organiza tours o visitas guiadas?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sí, la Municipalidad organiza visitas guiadas a diferentes puntos de interés del cantón. Consulta la sección de "Eventos" para conocer las próximas actividades programadas o contacta a la Oficina de Turismo al teléfono 2543-0000 extensión 123.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3>Paraíso Conectado</h3>
+                            <p>Municipalidad de Paraíso</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Plataforma oficial impulsada por la Municipalidad de Paraíso para apoyar el comercio local y promover el turismo en el cantón.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Enlaces Rápidos</h4>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="comercios.html">Comercios Locales</a></li>
+                            <li><a href="turismo.html">Turismo</a></li>
+                            <li><a href="eventos.html">Eventos</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Enlaces Institucionales</h4>
+                        <ul>
+                            <li><a href="#">Portal Municipal</a></li>
+                            <li><a href="#">Transparencia</a></li>
+                            <li><a href="#">Noticias</a></li>
+                            <li><a href="#">Trámites en Línea</a></li>
+                            <li><a href="#">Prensa Municipal</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Contacto Municipal</h4>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-phone"></i> Tel: 2543-0000</li>
+                            <li><i class="fas fa-envelope"></i> info@paraisomun.go.cr</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Paraíso, Cartago, Costa Rica</li>
+                            <li><i class="fas fa-clock"></i> Horario: L-V 8am-4pm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Municipalidad de Paraíso. Todos los derechos reservados.</p>
+                <p>Plataforma desarrollada para fortalecer la economía local y promover el turismo sostenible.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <style>
+        /* Estilos específicos para la página de contacto */
+        .contact-section {
+            padding: 3rem 0;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-form-container {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-details {
+            margin: 2rem 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            background-color: var(--light-gray);
+            color: var(--primary-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-text h4 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .social-media {
+            margin-top: 2rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+        
+        .social-icon.facebook {
+            background-color: #3b5998;
+        }
+        
+        .social-icon.twitter {
+            background-color: #1da1f2;
+        }
+        
+        .social-icon.instagram {
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        }
+        
+        .social-icon.youtube {
+            background-color: #ff0000;
+        }
+        
+        /* Formulario */
+        .contact-form {
+            margin-top: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ced4da;
+            border-radius: var(--border-radius);
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+        
+        .checkbox-label input {
+            width: auto;
+        }
+        
+        /* Mapa */
+        .map-section {
+            margin: 3rem 0;
+        }
+        
+        .map-container {
+            margin-top: 1.5rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .map-placeholder {
+            height: 300px;
+            background-color: var(--light-gray);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .map-placeholder i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .map-info h4 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .map-actions {
+            margin-top: 1.5rem;
+        }
+        
+        /* FAQ */
+        .faq-section {
+            margin-top: 4rem;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border: 1px solid var(--light-gray);
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            text-align: left;
+            background: none;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--dark-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+        
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .faq-answer p {
+            padding: 1rem 0;
+            margin: 0;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script>
+        // Funcionalidad para FAQ
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    faqItem.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
