@@ -19,11 +19,13 @@
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     --border-radius: 8px;
     --transition: all 0.3s ease;
+   
 }
 
 html {
     font-size: 16px;
-    scroll-behavior: smooth;
+  
+    
 }
 
 body {
@@ -32,7 +34,22 @@ body {
     line-height: 1.6;
     color: var(--dark-color);
     background-color: var(--white);
+      animation: pageFadeIn 0.45s cubic-bezier(.4,0,.2,1);
+    
 }
+/* Transición solo del contenido */
+#page-content {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.45s ease, transform 0.25s ease;
+}
+
+/* Estado de salida */
+body.page-transition #page-content {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
 
 h1, h2, h3, h4 {
     font-family: 'Poppins', sans-serif;
@@ -1502,3 +1519,15 @@ a:hover {
         align-items: flex-start;
     }
 }
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

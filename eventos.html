@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos - Paraíso Conectado</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="eventos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+ 
     <!-- Header y Navegación -->
     <header class="header">
         <div class="container header-container">
@@ -47,7 +49,7 @@
             <p>Conoce y participa en los eventos culturales, deportivos, educativos y comunitarios que se realizan en nuestro cantón.</p>
         </div>
     </section>
-
+<main id="page-content">
     <!-- Filtros de eventos -->
     <section class="filters">
         <div class="container">
@@ -166,7 +168,7 @@
             </div>
         </div>
     </section>
-
+</main>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -225,112 +227,8 @@
             </div>
         </div>
     </footer>
-
+    
     <script src="script.js"></script>
-    <style>
-        /* Estilos específicos para la página de eventos */
-        .calendar-section {
-            margin-top: 4rem;
-            padding: 2rem;
-            background-color: var(--light-gray);
-            border-radius: var(--border-radius);
-        }
-        
-        .calendar-section h3 {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-        }
-        
-        .calendar {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: white;
-            border-radius: var(--border-radius);
-            padding: 1.5rem;
-            box-shadow: var(--shadow);
-        }
-        
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .calendar-header h4 {
-            margin: 0;
-            color: var(--primary-color);
-        }
-        
-        .calendar-nav {
-            background: none;
-            border: none;
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-        
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
-        }
-        
-        .calendar-day {
-            text-align: center;
-            font-weight: 600;
-            color: var(--primary-color);
-            padding: 0.5rem;
-        }
-        
-        .calendar-date {
-            text-align: center;
-            padding: 0.75rem;
-            border-radius: 4px;
-            position: relative;
-        }
-        
-        .calendar-date:hover {
-            background-color: var(--light-gray);
-        }
-        
-        .calendar-date.event-day {
-            background-color: rgba(46, 125, 50, 0.1);
-            font-weight: 500;
-        }
-        
-        .event-indicator {
-            position: absolute;
-            bottom: 2px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 6px;
-            height: 6px;
-            background-color: var(--secondary-color);
-            border-radius: 50%;
-        }
-        
-        .event-details {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .event-detail {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--gray-color);
-            font-size: 0.875rem;
-        }
-        
-        .event-detail i {
-            color: var(--primary-color);
-            width: 16px;
-        }
-    </style>
+    
 </body>
 </html>
